@@ -14,7 +14,7 @@ Fill your `.yaml` file with this:
      eno1:
       dhcp4: yes
      
-### LAN INTERFACE <interface ID (Ex. eno2> STATIC ###
+### LAN INTERFACE <interface ID (Ex. eno2)> STATIC ###
     eno2:
      addresses:
       - 10.10.10.1/24```
