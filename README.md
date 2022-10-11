@@ -6,7 +6,8 @@
 
 Fill your `.yaml` file with this:
 
-```network:
+```
+network:
     version: 2
     renderer: networkd
     ethernets:
@@ -67,7 +68,8 @@ Setting up the DHCP server:
 
 ```nano /etc/dhcp/dhcpd.conf``` and fill it with:
 
-```default-lease-time 600;
+```
+default-lease-time 600;
 max-lease-time 7200;
 authoritive;
 
