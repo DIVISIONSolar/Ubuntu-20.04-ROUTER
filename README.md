@@ -57,3 +57,34 @@ Changing the DNS:
 
 ```sudo systemctl restart resolvconf.service```
 
+################################################
+
+Setting up the DHCP server:
+
+```apt-get install isc-dhcp-server```
+
+```systemctl start isc-dhcp-server.service && systemctl enable isc-dhcp-server.service```
+
+```nano /etc/dhcp/dhcpd.conf``` and fill it with:
+
+```default-lease-time 600;
+max-lease-time 7200;
+authoritive;
+
+subnet 10.10.10.0 netmask 255.255.255.0 {
+ range 10.10.10.10 10.10.10.200;
+ option routers 10.10.10.1;
+ option domain-name-servers 8.8.8.8, 8.8.4.4;
+}
+```
+add your interface to: ```/etc/default/isc-dhcp-server```
+
+```nano /etc/default/isc-dhcp-server```
+
+```INTERFACESv4="eno1"```
+
+```systemctl restart isc-dhcp-server.service```
+
+then:
+
+```systemctl status isc-dhcp-server.service```
