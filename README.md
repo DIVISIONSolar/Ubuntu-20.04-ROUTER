@@ -19,4 +19,12 @@ Fill your `.yaml` file with this:
       addresses:
        - 10.10.10.1/24
 ```
+Run:
+
 ```netplan apply```
+
+Then run:
+
+```ip addr``` to make sure the changes applied
+
+```ping 8.8.8.8``` to make sure you have a connection
