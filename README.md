@@ -18,3 +18,5 @@ Fill your `.yaml` file with this:
      eno2:
       addresses:
        - 10.10.10.1/24
+```
+```netplan apply```
