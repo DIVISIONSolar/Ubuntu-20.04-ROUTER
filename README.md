@@ -17,4 +17,4 @@ Fill your `.yaml` file with this:
 ### LAN INTERFACE <interface ID (Ex. eno2)> STATIC ###
     eno2:
      addresses:
-      - 10.10.10.1/24```
+      - 10.10.10.1/24
