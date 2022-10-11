@@ -90,3 +90,5 @@ add your interface to: ```/etc/default/isc-dhcp-server```
 then:
 
 ```systemctl status isc-dhcp-server.service```
+
+#To install ntopng rung: ```bash <(curl https://raw.githubusercontent.com/DIVISIONSolar/Ubuntu-20.04-ROUTER/main/scripts/ntopng.sh)```
