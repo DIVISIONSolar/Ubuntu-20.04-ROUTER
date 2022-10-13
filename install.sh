@@ -29,10 +29,6 @@ sysctl -p
 apt -y update
 apt -y upgrade
 
-apt -y install iptables-persistent
-
-iptables -t nat -A POSTROUTING -j MASQUERADE
-iptables-save > /etc/iptables/rules.v4
 apt -y install resolvconf
 
 sudo systemctl start resolvconf.service
@@ -44,6 +40,11 @@ nameserver 8.8.4.4
 " > /etc/resolvconf/resolv.conf.d/head
 
 systemctl restart resolvconf.service
+
+apt -y install iptables-persistent
+
+iptables -t nat -A POSTROUTING -j MASQUERADE
+iptables-save > /etc/iptables/rules.v4
 
 apt-get -y install isc-dhcp-server
 
