@@ -33,12 +33,6 @@ apt -y install iptables-persistent
 
 iptables -t nat -A POSTROUTING -j MASQUERADE
 iptables-save > /etc/iptables/rules.v4
-
-echo "
-nameserver 8.8.8.8
-nameserver 8.8.4.4
-" > /etc/resolv.conf
-
 apt -y install resolvconf
 
 sudo systemctl start resolvconf.service
