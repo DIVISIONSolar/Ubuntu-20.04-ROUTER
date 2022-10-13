@@ -75,3 +75,11 @@ INTERFACESv6=""""
 " > /etc/default/isc-dhcp-server
 
 systemctl restart isc-dhcp-server.service
+
+echo "Do you wish to restart the server?"
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) reboot;;;
+        No ) exit;;
+    esac
+done
